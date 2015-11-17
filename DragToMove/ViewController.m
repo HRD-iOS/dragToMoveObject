@@ -24,4 +24,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    CGPoint touchPoint = [[touches anyObject] locationInView:self.view];
+    [self.view1 setCenter: touchPoint];
+}
+
 @end
