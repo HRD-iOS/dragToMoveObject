@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191A85E11BFB6E0000BC4E22 /* SnappingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A85E01BFB6E0000BC4E22 /* SnappingViewController.m */; };
+		191A85E41BFB742A00BC4E22 /* DragToMoveCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A85E31BFB742A00BC4E22 /* DragToMoveCustomSegue.m */; };
+		191A85E71BFB7B3B00BC4E22 /* DragToMoveCustomSegueUnwind.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A85E61BFB7B3B00BC4E22 /* DragToMoveCustomSegueUnwind.m */; };
 		9A5CDC5E1BFB269F007B2960 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5CDC5D1BFB269F007B2960 /* main.m */; };
 		9A5CDC611BFB269F007B2960 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5CDC601BFB269F007B2960 /* AppDelegate.m */; };
 		9A5CDC641BFB269F007B2960 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5CDC631BFB269F007B2960 /* ViewController.m */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191A85DF1BFB6E0000BC4E22 /* SnappingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnappingViewController.h; sourceTree = "<group>"; };
+		191A85E01BFB6E0000BC4E22 /* SnappingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnappingViewController.m; sourceTree = "<group>"; };
+		191A85E21BFB742A00BC4E22 /* DragToMoveCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragToMoveCustomSegue.h; sourceTree = "<group>"; };
+		191A85E31BFB742A00BC4E22 /* DragToMoveCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragToMoveCustomSegue.m; sourceTree = "<group>"; };
+		191A85E51BFB7B3B00BC4E22 /* DragToMoveCustomSegueUnwind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragToMoveCustomSegueUnwind.h; sourceTree = "<group>"; };
+		191A85E61BFB7B3B00BC4E22 /* DragToMoveCustomSegueUnwind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragToMoveCustomSegueUnwind.m; sourceTree = "<group>"; };
 		9A5CDC591BFB269F007B2960 /* DragToMove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragToMove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5CDC5D1BFB269F007B2960 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A5CDC5F1BFB269F007B2960 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +69,12 @@
 			children = (
 				9A5CDC5F1BFB269F007B2960 /* AppDelegate.h */,
 				9A5CDC601BFB269F007B2960 /* AppDelegate.m */,
+				191A85E21BFB742A00BC4E22 /* DragToMoveCustomSegue.h */,
+				191A85E31BFB742A00BC4E22 /* DragToMoveCustomSegue.m */,
+				191A85E51BFB7B3B00BC4E22 /* DragToMoveCustomSegueUnwind.h */,
+				191A85E61BFB7B3B00BC4E22 /* DragToMoveCustomSegueUnwind.m */,
+				191A85DF1BFB6E0000BC4E22 /* SnappingViewController.h */,
+				191A85E01BFB6E0000BC4E22 /* SnappingViewController.m */,
 				9A5CDC621BFB269F007B2960 /* ViewController.h */,
 				9A5CDC631BFB269F007B2960 /* ViewController.m */,
 				9A5CDC651BFB269F007B2960 /* Main.storyboard */,
@@ -149,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191A85E41BFB742A00BC4E22 /* DragToMoveCustomSegue.m in Sources */,
+				191A85E71BFB7B3B00BC4E22 /* DragToMoveCustomSegueUnwind.m in Sources */,
 				9A5CDC641BFB269F007B2960 /* ViewController.m in Sources */,
 				9A5CDC611BFB269F007B2960 /* AppDelegate.m in Sources */,
+				191A85E11BFB6E0000BC4E22 /* SnappingViewController.m in Sources */,
 				9A5CDC5E1BFB269F007B2960 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +316,7 @@
 				9A5CDC721BFB269F007B2960 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

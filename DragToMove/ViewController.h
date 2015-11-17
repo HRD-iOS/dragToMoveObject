@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *view1;
-
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+@property (weak, nonatomic) IBOutlet UIView *blueBox;
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DragToMoveCustomSegueUnwind.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Initialize the animator.
+    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,9 +27,32 @@
 }
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
+    
     CGPoint touchPoint = [[touches anyObject] locationInView:self.view];
-    [self.view1 setCenter: touchPoint];
+    [self.blueBox setCenter: touchPoint];
+}
+- (IBAction)shopSnappingView:(id)sender {
+    [self performSegueWithIdentifier:@"snappingSegue" sender:self];
+}
+
+-(IBAction) returnFromSegueActions:(UIStoryboardSegue *)sender{
+    if ([sender.identifier isEqualToString:@"snappingUnwindSegue"]) {
+        UIColor *originalColor = self.view.backgroundColor;
+        self.view.backgroundColor = [UIColor redColor];
+        [UIView animateWithDuration:1.0 animations:^(void){
+            self.view.backgroundColor = originalColor;
+        }];
+    }
+}
+
+
+-(UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier{
+    
+    if ([identifier isEqualToString:@"snappingUnwindSegue"]) {
+        DragToMoveCustomSegueUnwind *unwindSegue = [[DragToMoveCustomSegueUnwind alloc]initWithIdentifier:@"snappingUnwindSegue" source:fromViewController destination:toViewController];
+        return unwindSegue;
+    }
+return  [self segueForUnwindingToViewController:toViewController fromViewController:fromViewController identifier:@"snappingUnwindSegue"];
 }
 
 @end
